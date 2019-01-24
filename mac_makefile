@@ -1,0 +1,19 @@
+# Portal Protector Game, Jack Kearsley, April 2018.
+# Makefile for OS X.
+
+CXXFLAGS = -Wno-deprecated -std=c++11
+OBJECTS = main.o 3D_Draw.o BF_Culling.o Clipping.o Line.o Mouse_Actions.o Paint.o Polygon.o Transform.o Triangle.o
+
+OSX_Portal_Protector : $(OBJECTS)
+	g++ $(OBJECTS) -o OSX_Portal_Protector -framework GLUT -framework OpenGL 
+
+main.o : Header.h
+3D_Draw.o : Header.h
+BF_Culling.o : Header.h
+Clipping.o : Header.h
+Line.o : Header.h
+Mouse_Actions.o : Header.h
+Paint.o : Header.h
+Polygon.o : Header.h
+Transform.o : Header.h
+Triangle.o : Header.h
